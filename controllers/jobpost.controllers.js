@@ -3,7 +3,11 @@ export const jobIndex = (req, res) =>{
 };
 
 export const jobpostCreate = (req, res) =>{
-    res.send("Create a jobpost")   
+    // id, title, desination, decription, 
+    console.log(req.body);
+
+    return res.json(req.body);
+    // create a jobpost info  
 };
 
 export const jobpostupdate = (req, res) =>{
