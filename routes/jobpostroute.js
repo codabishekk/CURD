@@ -1,5 +1,5 @@
 import express from 'express' 
-import { jobIndex, jobpostCreate, jobpostdelete, jobpostupdate } from '../controllers/jobpost.controllers.js';
+import { jobdetails, jobIndex, jobpostCreate, jobpostdelete, jobpostupdate } from '../controllers/jobpost.controllers.js';
 
 const router =  express.Router()
 
@@ -7,6 +7,9 @@ const router =  express.Router()
 
 // For read jobpost
 router.get('/', jobIndex);
+
+//fetching the jobpost
+router.get('/:id',jobdetails);
 
 // For creating jobpost
 router.post('/', jobpostCreate)
