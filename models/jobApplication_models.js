@@ -12,7 +12,18 @@ const schema = new Schema({
         type:String,
         required:true,
     },
-    location:String  
+    location:{
+        type:String,
+        required: true
+    },
+    salary:{
+        type:Number,
+        required:false
+    },
+    number:{
+        type:String,
+        required:false
+    }
 });
 
 // Create your model

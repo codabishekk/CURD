@@ -15,7 +15,9 @@ export const jobpostCreate = async (req, res) =>{
     const newJobpost = new jobpost({
         title:req.body.title,
         description:req.body.description,
-        location:req.body.location
+        location:req.body.location,
+        salary:req.body.salary,
+        number:req.body.number
     });
 
     try{
@@ -71,7 +73,7 @@ export const jobpostdelete = async (req, res) => {
         res.json({message:"jobpostdeleted!..."})
     }catch(error){
         res.status(500).json({message:error.message})
-}
-
     }
+
+}
     
