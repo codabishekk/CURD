@@ -61,27 +61,17 @@ export const jobpostupdate = async(req, res) => {
     }catch (error){
          res.status(400).json({message:error.message})
     }
+}
 
-
-/*    //validate the user input
-    //if(req.body.title != null){
-        res.jobpost.title= req.body.title;
-    }
-    if(req.body.description != null){
-        res.jobpost.description = req.body.description;
-    }
-    if(req.body.location != null){
-        res.jobpost.location = req.body.location;
-    }
+export const jobpostdelete = async (req, res) => {
+    const jobId = req.params.id;
+    
     try{
-        const updatejobpost = await res.jobpost.save()
-        res.json(updatejobpost)
-    }catch (error){
-        res.status(400).json({message:error.message})
-    }
-   */ 
+        await jobpost.deleteOne({_id: jobId});
+        res.json({message:"jobpostdeleted!..."})
+    }catch(error){
+        res.status(500).json({message:error.message})
 }
 
-export const jobpostdelete = (req, res) => {
-    res.send ('delete a jobpost')   
-}
+    }
+    
