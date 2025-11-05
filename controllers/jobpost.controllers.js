@@ -17,7 +17,8 @@ export const jobpostCreate = async (req, res) =>{
         description:req.body.description,
         location:req.body.location,
         salary:req.body.salary,
-        number:req.body.number
+        number:req.body.number,
+        experiences:req.body.experiences
     });
 
     try{

@@ -12,11 +12,6 @@ app.use(express.urlencoded({extended: true}));
 //connectDB
 connectDB();
 
-app.get('/',(req, res) =>{
-    res.json({msg:"hello buddy's"})
-});
-
-
 //CLIENT-> MIDDLEWEAR -> SERVER
 app.use('/jobpost', jobpostroute );
 

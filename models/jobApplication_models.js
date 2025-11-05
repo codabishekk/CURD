@@ -23,6 +23,11 @@ const schema = new Schema({
     number:{
         type:String,
         required:false
+    },
+    experiences:{
+        type:Number,
+        required:true,
+        default:0
     }
 });
 
